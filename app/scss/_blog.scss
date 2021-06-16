@@ -1,0 +1,178 @@
+.blog {
+    &__inner {
+        display: flex;
+    }
+    &__items {
+        margin-bottom: 75px;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+    &__top {
+        position: relative;
+        margin-bottom: 34px;
+    }
+    &__img {
+        object-fit: cover;
+    }
+    &__calendar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        padding: 26px 22px;
+        font-size: 12px;
+        color: $white;
+        background-color: $main;
+    }
+    &__descr {
+        position: relative;
+        padding-left: 18px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 14px;
+            height: 17px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &--date {
+            padding-right: 30px;
+            &::before {
+                background-image: url("#{$img}articles/1.svg");
+            }
+        }
+        &--author {
+            max-width: 100px;
+            text-transform: uppercase;
+            &::before {
+                background-image: url("#{$img}articles/2.svg");
+            }
+            &:hover {
+                color: $title;
+            }
+            @extend %hover-link;
+        }
+    }
+    &__link {
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        color: $grey-450;
+        &--text {
+            margin-bottom: 15px;
+            &:hover {
+                color: $grey-450;
+            }
+        }
+        @extend %hover-link;
+    }
+    &__text {
+        margin-bottom: 30px;
+        line-height: 1.9;
+        color: $title;
+        &--accent {
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        &--light {
+            margin-bottom: 0;
+            color: $grey-450;
+        }
+    }
+    &__more {
+        padding: 20px 20px 20px 19px;
+        border: 1px solid $yellow-light;
+        border-radius: 5px;
+        color: $main;
+        background-color: transparent;
+        &:hover {
+            color: $bg;
+            background-color: $title;
+            svg {
+                fill: $bg;
+            }
+        }
+        svg {
+            fill: $main;
+        }
+        span {
+            padding-right: 42px;
+        }
+    }
+    &__pretitle {
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 18px;
+        color: $title;
+    }
+    &__main {
+        h2 {
+            margin-bottom: 15px;
+            font-weight: 400;
+            font-size: 36px;
+            color: $grey-450;
+        }
+        h3 {
+            margin-bottom: 14px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.9;
+            color: $title;
+        }
+        p {
+            margin-bottom: 30px;
+            line-height: 1.9;
+            color: $title;
+        }
+        blockquote {
+            margin: 37px 0 46px;
+            padding: 18px 50px 18px 35px;
+            border-left: 7px solid $main;
+            line-height: 1.8;
+            color: $title;
+            background-color: rgba($main, 0.2);
+        }
+        cite {
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            padding-left: 45px;
+            font-style: normal;
+            color: $title;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 20px;
+                height: 4px;
+                background-color: $main;
+                transform: translateY(-50%);
+            }
+        }
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 43px;
+            div {
+                display: block;
+                margin-bottom: 0;
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            img {
+                margin-right: 30px;
+            }
+        }
+    }
+}

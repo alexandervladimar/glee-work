@@ -22,7 +22,9 @@ function styles() {
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 versions'],
-            grid: true
+            // grid: true
+            add: true,
+            grid: false
         }))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
@@ -33,6 +35,7 @@ function scripts() {
             'node_modules/jquery/dist/jquery.js',
             'node_modules/slick-carousel/slick/slick.js',
             'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+            'node_modules/rateyo/src/jquery.rateyo.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))

@@ -1,0 +1,89 @@
+.contact {
+    text-align: center;
+    &__title {
+        margin-bottom: 68px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 35px;
+        color: $text;
+        span {
+            display: block;
+            margin-bottom: 9px;
+            font-family: $poppins;
+            font-weight: 700;
+            font-size: 16px;
+            color: $main;
+        }
+    }
+    &__address {
+        margin-bottom: 120px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        padding: 70px 10px;
+        width: 100%;
+        max-width: 370px;
+        border: 2px solid transparent;
+        background-color: $grey-50;
+        transition: border-color 0.5s, background-color 0.5s;
+        &:hover {
+            border-color: $main;
+            background-color: $grey-50;
+            .contact__img-wrap {
+                background-color: $main;
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    &__img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 58px;
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        box-shadow: 0 6px 57px rgba(37, 37, 37, 0.05);
+        background-color: $white;
+        transition: background-color 0.5s;
+        svg {
+            fill: $main;
+            transition: fill 0.5s;
+        }
+    }
+    &__pretitle {
+        margin-bottom: 15px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 20px;
+        color: $grey-550;
+    }
+    &__text {
+        line-height: 1.9;
+    }
+    &__link {
+        @extend %hover-link;
+    }
+    &__form {
+        margin-right: 20px;
+        width: 100%;
+        max-width: 620px;
+        text-align: left;
+        textarea {
+            margin-bottom: 36px;
+            min-height: 175px;
+        }
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+}

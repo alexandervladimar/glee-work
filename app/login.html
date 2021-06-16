@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glee - comfortable furniture</title>
+    <title>Log in</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -81,11 +81,86 @@
         </div>
     </header>
 
-
     <main class="main">
+        <div class="top-section">
+            <h1 class="top-section__title">Log in</h1>
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="/">Home</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link">Log in</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="login">
+            <div class="container">
+                <form action="#" class="login__form">
+                    <label class="login__label">
+                        <span>Username or email address *</span>
+                        <input class="login__input" type="email" id="login_email" name="request[email]" required />
+                    </label>
+                    <label class="login__label">
+                        <span>Password *</span>
+                        <input class="login__input" type="password" id="login_password" name="request[password]"
+                            required />
+                    </label>
+                    <button class="form-btn login__button" type="submit">Login</button>
+                    <div class="login__box">
+                        <label class="checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" />
+                            <span class="checkbox__text">Remember me</span>
+                        </label>
+                        <a class="login__link" href="#">Lost your password?</a>
+                    </div>
+                    <a class="login__link login__link--solo" href="#">Not registered? No problem</a>
+                    <button class="form-btn form-btn--light login__button" type="button">
+                        Create an account
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="company">
+            <div class="container">
+                <ul class="company__items">
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo1.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo2.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo3.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo4.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo5.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo1.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo2.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo3.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo4.png" alt="logo" />
+                    </li>
+                    <li class="company__item">
+                        <img class="company__img" src="images/company/logo5.png" alt="logo" />
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
-
 
     <footer class="footer">
         <div class="container">
@@ -93,13 +168,7 @@
                 <h2 class="visually-hidden">Footer</h2>
                 <address class="address">
                     <a class="logo footer__logo" href="#">
-                        <img
-                            class="logo__img"
-                            width="146"
-                            height="39"
-                            src="images/logo.png"
-                            alt="Logo Glee"
-                        />
+                        <img class="logo__img" width="146" height="39" src="images/logo.png" alt="Logo Glee" />
                     </a>
                     <div class="address__item">
                         <a class="address__link" href="#">

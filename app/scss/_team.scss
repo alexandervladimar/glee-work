@@ -1,0 +1,92 @@
+.team {
+    margin-bottom: 70px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-bottom: 21px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 36px;
+        color: $title;
+    }
+    &__text {
+        margin-bottom: 34px;
+        max-width: 305px;
+        line-height: 1.9;
+        color: $title;
+    }
+    &__next {
+        padding: 16px 28px 16px 16px;
+        border-radius: 5px;
+        span {
+            padding-right: 9px;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        width: 100%;
+        max-width: 800px;
+    }
+    &__item {
+        position: relative;
+        margin: 0 15px 103px;
+        width: 100%;
+        max-width: 370px;
+    }
+    &__img {
+        object-fit: cover;
+    }
+    &__wrap {
+        position: absolute;
+        left: 0;
+        bottom: -62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px;
+        width: 100%;
+        max-width: 325px;
+        box-shadow: 0 6px 57px rgba($grey-500, 0.05);
+        background-color: $white;
+    }
+    &__name {
+        margin-bottom: 15px;
+        max-width: 180px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 22px;
+        text-overflow: clip;
+    }
+    &__job {
+        max-width: 180px;
+        text-overflow: clip;
+        color: $blue-200;
+    }
+    &__social {
+        display: flex;
+    }
+    &__icon {
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        background-color: $grey-50;
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: $grey-150;
+        }
+        @extend %hover-nav-header;
+    }
+}
