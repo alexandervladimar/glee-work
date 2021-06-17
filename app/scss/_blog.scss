@@ -17,6 +17,10 @@
     &__img {
         object-fit: cover;
     }
+    &__wrap {
+        position: relative;
+        margin-bottom: 34px;
+    }
     &__calendar {
         position: absolute;
         left: 0;
