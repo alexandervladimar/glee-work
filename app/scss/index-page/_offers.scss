@@ -1,0 +1,95 @@
+.offers {
+    &__items {
+        display: flex;
+        @include r($lg) {
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        padding: 97px 100px 100px 130px;
+        width: 100%;
+        color: $title;
+        background-color: rgba($bg, 0.4);
+        @include r($xxl) {
+            padding: 25px;
+        }
+        @include r($sm) {
+            padding: 20px;
+        }
+        &:not(:last-child) {
+            margin-right: 30px;
+            @include r($lg) {
+                margin-right: 0;
+                border-bottom: 1px solid $title;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        padding-left: 255px;
+        @include r($xl) {
+            padding-left: 160px;
+        }
+        @include r($lg) {
+            padding-left: 140px;
+        }
+        @include r($sm) {
+            padding-left: 0;
+        }
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 405px;
+        max-width: 235px;
+        object-fit: cover;
+        @include r($xl) {
+            height: auto;
+            max-width: 100px;
+        }
+        @include r($sm) {
+            position: static;
+            margin-bottom: 15px;
+        }
+    }
+    &__title {
+        @include line-clamp(2);
+        margin-bottom: 21px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 26px;
+        @include r($sm) {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+    }
+    &__text {
+        @include line-clamp(3);
+        margin-bottom: 34px;
+        line-height: 1.6;
+        @include r($sm) {
+            margin-bottom: 15px;
+        }
+    }
+    &__link {
+        padding: 20px 20px 20px 19px;
+        border: 1px solid $yellow-light;
+        border-radius: 5px;
+        color: $title;
+        background-color: transparent;
+        &:hover {
+            color: $bg;
+            background-color: $title;
+            svg {
+                fill: $bg;
+            }
+        }
+        svg {
+            fill: $title;
+        }
+        span {
+            padding-right: 42px;
+        }
+    }
+}

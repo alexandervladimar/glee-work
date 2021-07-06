@@ -34,6 +34,47 @@ $blue-700: #1f2044;
 $blue-800: #222933;
 $img: "../images/";
 $fonts: "../fonts/";
+// @include line-clamp()
+@mixin line-clamp($property) {
+    -webkit-line-clamp: $property;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin r($width) {
+    @media only screen and (max-width: $width + 'px') {
+        @content;
+    }
+}
+
+$xxl: 1800;
+$xl: 1220;
+$lg: 992;
+$md: 768;
+$sm: 576;
+@media (max-width: $lg + "px") {
+    .advantages,
+    .products,
+    .design,
+    .video-popup,
+    .products__items,
+    .about,
+    .privilege,
+    .team,
+    .top-section,
+    .form-comment,
+    .comments,
+    .terms,
+    .login,
+    .contact__address,
+    .product-details,
+    .product-details__inner,
+    .product-description {
+        margin-bottom: 50px;
+    }
+}
+
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }

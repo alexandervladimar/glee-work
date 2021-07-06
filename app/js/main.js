@@ -14,6 +14,11 @@ $(function() {
     (() => mixitup(containerEl1, config))();
     (() => mixitup(containerEl2, config))();
 });
+$('.header__btn').on('click', function() {
+    $(this).toggleClass('header__btn--active');
+    $('.menu').toggleClass('menu--mobile');
+    $('body').toggleClass('body--with-menu');
+});
 
 $('.company__items').slick({
     arrows: false,

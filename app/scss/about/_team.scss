@@ -1,0 +1,142 @@
+.team {
+    margin-bottom: 70px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @include r($xl) {
+            flex-direction: column;
+        }
+    }
+    &__description {
+        @include r($xl) {
+            margin: 0 auto 30px;
+            width: 100%;
+            max-width: 550px;
+        }
+    }
+    &__title {
+        @include line-clamp(1);
+        margin-bottom: 21px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 36px;
+        color: $title;
+        @include r($xl) {
+            text-align: center;
+        }
+        @include r($lg) {
+            margin-bottom: 15px;
+        }
+    }
+    &__text {
+        @include line-clamp(10);
+        margin-bottom: 34px;
+        max-width: 305px;
+        line-height: 1.9;
+        color: $title;
+        @include r($xl) {
+            max-width: 550px;
+        }
+        @include r($lg) {
+            margin-bottom: 15px;
+        }
+    }
+    &__next {
+        padding: 16px 28px 16px 16px;
+        border-radius: 5px;
+        span {
+            padding-right: 9px;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        width: 100%;
+        max-width: 800px;
+        @include r($xl) {
+            margin: 0 auto;
+        }
+        @include r($lg) {
+            justify-content: center;
+        }
+    }
+    &__item {
+        position: relative;
+        margin: 0 15px 103px;
+        width: 100%;
+        max-width: 370px;
+        @include r($lg) {
+            margin-bottom: 30px;
+            max-width: 300px;
+        }
+        @include r($sm) {
+            margin: 0 0 30px;
+        }
+    }
+    &__img {
+        object-fit: cover;
+    }
+    &__wrap {
+        position: absolute;
+        left: 0;
+        bottom: -62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px;
+        width: 100%;
+        max-width: 325px;
+        box-shadow: 0 6px 57px rgba($grey-500, 0.05);
+        background-color: $white;
+        @include r($lg) {
+            position: relative;
+            bottom: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px;
+        }
+    }
+    &__name {
+        @include line-clamp(1);
+        margin-bottom: 15px;
+        max-width: 180px;
+        font-family: $dm-sans;
+        font-weight: 700;
+        font-size: 22px;
+        text-overflow: clip;
+    }
+    &__job {
+        @include line-clamp(1);
+        max-width: 180px;
+        text-overflow: clip;
+        color: $blue-200;
+        @include r($lg) {
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+    &__social {
+        display: flex;
+    }
+    &__icon {
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        background-color: $grey-50;
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: $grey-150;
+        }
+        @extend %hover-nav-header;
+    }
+}

@@ -1,0 +1,32 @@
+%hover-nav-header {
+    transition: background-color 0.5s, fill 0.5s;
+    &:focus {
+        outline-style: none;
+    }
+    &:hover {
+        background-color: #243f4d;
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+%hover-link {
+    transition: color 0.5s;
+    &:hover {
+        color: #a3bbc8;
+        svg {
+            fill: #a3bbc8;
+        }
+    }
+    svg {
+        transition: fill 0.5s;
+    }
+}
+
+%hover-btn {
+    transition: color 0.5s;
+    &:hover {
+        color: #414141;
+    }
+}
