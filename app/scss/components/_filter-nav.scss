@@ -1,0 +1,32 @@
+.filter-nav {
+    display: flex;
+    &__button {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+    &__btn {
+        margin-bottom: 50px;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        &--grid {
+            background-image: url("#{$img}grid.svg");
+        }
+        &--list {
+            background-image: url("#{$img}list.svg");
+        }
+        &--filter {
+            display: none;
+            background-image: url("#{$img}filter.svg");
+            @include r($lg) {
+                display: inline-block;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

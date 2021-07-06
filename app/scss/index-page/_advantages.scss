@@ -1,0 +1,62 @@
+.advantages {
+    margin-bottom: 70px;
+    &__items {
+        display: flex;
+        @include r($lg) {
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        padding: 48px;
+        width: 100%;
+        font-family: $dm-sans;
+        font-weight: 400;
+        background-color: rgba($bg, 0.2);
+        @include r($xl) {
+            padding: 20px;
+        }
+        &:not(:last-child) {
+            border-right: 1px solid rgba($title, 0.1);
+            @include r($lg) {
+                border-right: none;
+                border-bottom: 1px solid rgba($title, 0.1);
+            }
+        }
+    }
+    &__info {
+        padding-left: 80px;
+        max-width: 306px;
+        background-position: top left;
+        background-repeat: no-repeat;
+        @include r($xl) {
+            padding-left: 70px;
+        }
+        @include r($lg) {
+            width: 100%;
+            max-width: 360px;
+        }
+        &--support {
+            background-image: url("#{$img}icons/support.svg");
+        }
+        &--delivery {
+            background-image: url("#{$img}icons/delivery.svg");
+        }
+        &--cart {
+            background-image: url("#{$img}icons/credit.svg");
+        }
+    }
+    &__title {
+        @include line-clamp(2);
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        color: $grey-400;
+    }
+    &__text {
+        @include line-clamp(4);
+        line-height: 1.4;
+        color: $grey-300;
+    }
+}
